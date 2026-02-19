@@ -3,6 +3,7 @@ import type { NavbarProps, NavbarView } from './Navbar.types.ts'
 const VIEW_OPTIONS: { view: NavbarView; label: string }[] = [
   { view: 'journal', label: 'Journal' },
   { view: 'daily-actions', label: 'Daily Actions' },
+  { view: 'themes', label: 'Themes' },
 ]
 
 export const Navbar = ({ activeView, onViewChange }: NavbarProps) => {

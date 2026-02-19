@@ -13,6 +13,7 @@ describe('App', () => {
 
     expect(screen.getByRole('tab', { name: /Switch to Journal/i })).toBeDefined()
     expect(screen.getByRole('tab', { name: /Switch to Daily Actions/i })).toBeDefined()
+    expect(screen.getByRole('tab', { name: /Switch to Themes/i })).toBeDefined()
   })
 
   test('renders Journal view by default', () => {
@@ -40,5 +41,15 @@ describe('App', () => {
 
     expect(screen.getByRole('button', { name: 'Previous' })).toBeDefined()
     expect(screen.getByLabelText('Goal space one')).toBeDefined()
+  })
+
+  test('switches to Themes view when Themes tab is clicked', () => {
+    render(<App />)
+
+    fireEvent.click(screen.getByRole('tab', { name: /Switch to Themes/i }))
+
+    expect(screen.getByText('THEME')).toBeDefined()
+    expect(screen.getByText('DESCRIPTION')).toBeDefined()
+    expect(screen.getByText('Ideal Outcomes')).toBeDefined()
   })
 })

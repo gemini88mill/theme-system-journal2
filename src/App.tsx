@@ -3,6 +3,7 @@ import { Navbar } from './components/organism/Navbar/Navbar.tsx'
 import type { NavbarView } from './components/organism/Navbar/Navbar.types.ts'
 import { Journal } from './components/organism/Journal/Journal.tsx'
 import { DailyActions } from './components/organism/DailyActions/DailyActions.tsx'
+import { Themes } from './components/organism/Themes/Themes.tsx'
 import { DailyActionsProvider } from './providers/DailyActionsProvider.tsx'
 
 export const App = () => {
@@ -17,6 +18,7 @@ export const App = () => {
           <DailyActions />
         </DailyActionsProvider>
       )}
+      {activeView === 'themes' && <Themes />}
     </>
   )
 }
