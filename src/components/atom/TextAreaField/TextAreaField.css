@@ -1,0 +1,18 @@
+.text-area-field {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #7b8ea2;
+  background-color: #f8fafc;
+  background-image: radial-gradient(rgb(124 145 165 / 40%) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: #2d3f4f;
+  font-size: 1rem;
+  line-height: 1.45;
+  padding: 0.95rem 1rem;
+  resize: vertical;
+}
+
+.text-area-field::placeholder {
+  color: #6f8498;
+  opacity: 0.95;
+}
