@@ -5,7 +5,7 @@ import { fireEvent, render, within } from '@testing-library/react'
 import { Navbar } from './Navbar.tsx'
 
 describe('Navbar', () => {
-  test('renders both Journal and Daily Actions options', () => {
+  test('renders Journal, Daily Actions, and Themes options', () => {
     const { container } = render(
       <Navbar activeView="journal" onViewChange={() => {}} />,
     )
@@ -13,6 +13,7 @@ describe('Navbar', () => {
 
     expect(view.getByRole('tab', { name: /Switch to Journal/i })).toBeDefined()
     expect(view.getByRole('tab', { name: /Switch to Daily Actions/i })).toBeDefined()
+    expect(view.getByRole('tab', { name: /Switch to Themes/i })).toBeDefined()
   })
 
   test('marks active view with aria-selected', () => {
@@ -42,8 +43,8 @@ describe('Navbar', () => {
   })
 
   test('calls onViewChange with journal when Journal tab is clicked', () => {
-    let receivedView: 'journal' | 'daily-actions' | null = null
-    const onViewChange = (view: 'journal' | 'daily-actions') => {
+    let receivedView: 'journal' | 'daily-actions' | 'themes' | null = null
+    const onViewChange = (view: 'journal' | 'daily-actions' | 'themes') => {
       receivedView = view
     }
 
@@ -58,8 +59,8 @@ describe('Navbar', () => {
   })
 
   test('calls onViewChange with daily-actions when Daily Actions tab is clicked', () => {
-    let receivedView: 'journal' | 'daily-actions' | null = null
-    const onViewChange = (view: 'journal' | 'daily-actions') => {
+    let receivedView: 'journal' | 'daily-actions' | 'themes' | null = null
+    const onViewChange = (view: 'journal' | 'daily-actions' | 'themes') => {
       receivedView = view
     }
 
@@ -71,5 +72,31 @@ describe('Navbar', () => {
     fireEvent.click(view.getByRole('tab', { name: /Switch to Daily Actions/i }))
 
     expect(receivedView === 'daily-actions').toBe(true)
+  })
+
+  test('marks Themes as active when activeView is themes', () => {
+    const { container } = render(
+      <Navbar activeView="themes" onViewChange={() => {}} />,
+    )
+    const view = within(container)
+
+    const themesTab = view.getByRole('tab', { name: /Switch to Themes/i })
+    expect(themesTab.getAttribute('aria-selected')).toBe('true')
+  })
+
+  test('calls onViewChange with themes when Themes tab is clicked', () => {
+    let receivedView: 'journal' | 'daily-actions' | 'themes' | null = null
+    const onViewChange = (view: 'journal' | 'daily-actions' | 'themes') => {
+      receivedView = view
+    }
+
+    const { container } = render(
+      <Navbar activeView="journal" onViewChange={onViewChange} />,
+    )
+    const view = within(container)
+
+    fireEvent.click(view.getByRole('tab', { name: /Switch to Themes/i }))
+
+    expect(receivedView === 'themes').toBe(true)
   })
 })

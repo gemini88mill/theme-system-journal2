@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+.themes-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.themes-sheet {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.themes-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-family: system-ui, sans-serif;
+}
+
+.themes-content {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.themes-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.themes-input:focus {
+  border-color: #9ca3af;
+}
+
+.themes-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.themes-outcomes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.themes-outcomes-header {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-family: system-ui, sans-serif;
+}
+
+.themes-outcome-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.themes-outcome-checkbox {
+  width: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  flex-shrink: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+  cursor: pointer;
+  accent-color: #6b7280;
+}
+
+.themes-outcome-input {
+  flex: 1;
+}
+
+.themes-add-outcome {
+  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: transparent;
+  border: 1px dashed #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.themes-add-outcome:hover {
+  border-color: #9ca3af;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .themes-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .themes-sheet {
+    padding: 0.9rem;
+  }
+}
