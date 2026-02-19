@@ -53,7 +53,7 @@ export const DailyActions = () => {
             <div className="space-y-2">
               {actions.map((actionItem) => (
                 <div
-                  className="grid grid-cols-[260px_repeat(7,minmax(0,1fr))_52px] items-center gap-2"
+                  className="group grid grid-cols-[260px_repeat(7,minmax(0,1fr))_52px] items-center gap-2"
                   key={actionItem.id}
                 >
                   <InputField
@@ -69,10 +69,10 @@ export const DailyActions = () => {
                       />
                     </div>
                   ))}
-                  <div className="flex justify-center">
+                  <div className="flex justify-center opacity-0 transition-opacity group-hover:opacity-100">
                     <button
                       aria-label={`Delete ${actionItem.label}`}
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border-0 bg-transparent p-0 text-slate-500 transition-colors hover:text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border-0 bg-transparent p-0 text-red-500 transition-colors hover:text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       onClick={() => removeAction(actionItem.id)}
                       type="button"
                     >
