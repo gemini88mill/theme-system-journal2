@@ -30,6 +30,13 @@ export const Themes = () => {
   return (
     <main className="themes-page">
       <section className="themes-sheet">
+        <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Themes</h1>
+            <p className="text-sm text-slate-600">Define themes and ideal outcomes.</p>
+          </div>
+        </header>
+
         <div>
           <span className="themes-label">THEME</span>
           <div className="themes-content" style={{ marginTop: '0.25rem' }}>

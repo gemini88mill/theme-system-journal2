@@ -112,6 +112,13 @@ export const Journal = () => {
   return (
     <main className="journal-page">
       <section className="journal-sheet">
+        <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Journal</h1>
+            <p className="text-sm text-slate-600">Record your daily goals and reflections.</p>
+          </div>
+        </header>
+
         <header className="journal-nav">
           <button
             type="button"
