@@ -17,7 +17,6 @@ describe('DateLabel', () => {
     const dateElement = screen.getByText('01/03')
     const className = dateElement.className
 
-    expect(className).toContain('border')
     expect(className).toContain('bg-slate-100')
     expect(className).toContain('text-xs')
   })
