@@ -3,6 +3,7 @@ import './Themes.css'
 import type { IdealOutcome } from './Themes.types.ts'
 import { InputField } from '../../atom/InputField/InputField.tsx'
 import { TextAreaField } from '../../atom/TextAreaField/TextAreaField.tsx'
+import { Title } from '../../atom/Title/Title.tsx'
 
 let outcomeIdCounter = 0
 const nextOutcomeId = () => {
@@ -28,11 +29,11 @@ export const Themes = () => {
   }
 
   return (
-    <main className="themes-page">
+    <main className="themes-page bg-slate-900">
       <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Themes</h1>
+            <Title>Themes</Title>
             <p className="text-sm text-slate-600">Define themes and ideal outcomes.</p>
           </div>
         </header>

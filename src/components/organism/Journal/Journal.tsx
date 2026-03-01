@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect } from 'react'
 import './Journal.css'
 import type { JournalEntry, StoredJournalEntries } from './Journal.types.ts'
 import { TextAreaField } from '../../atom/TextAreaField/TextAreaField.tsx'
+import { Title } from '../../atom/Title/Title.tsx'
 
 const STORAGE_KEY = 'journal.entries.v1'
 
@@ -110,11 +111,11 @@ export const Journal = () => {
   }
 
   return (
-    <main className="journal-page">
+    <main className="journal-page bg-slate-900">
       <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Journal</h1>
+            <Title>Journal</Title>
             <p className="text-sm text-slate-600">Record your daily goals and reflections.</p>
           </div>
         </header>
