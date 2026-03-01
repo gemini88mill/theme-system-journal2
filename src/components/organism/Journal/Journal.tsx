@@ -111,7 +111,7 @@ export const Journal = () => {
 
   return (
     <main className="journal-page">
-      <section className="journal-sheet">
+      <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Journal</h1>
@@ -119,7 +119,8 @@ export const Journal = () => {
           </div>
         </header>
 
-        <header className="journal-nav">
+        <section className="journal-sheet">
+          <header className="journal-nav">
           <button
             type="button"
             className="journal-nav-button"
@@ -177,7 +178,8 @@ export const Journal = () => {
           value={activeEntry.links}
           onChange={(event) => updateActiveEntry('links', event.target.value)}
         />
-      </section>
+        </section>
+      </div>
     </main>
   )
 }

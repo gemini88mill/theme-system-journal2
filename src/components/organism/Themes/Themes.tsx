@@ -29,7 +29,7 @@ export const Themes = () => {
 
   return (
     <main className="themes-page">
-      <section className="themes-sheet">
+      <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold text-slate-800 md:text-3xl">Themes</h1>
@@ -37,7 +37,8 @@ export const Themes = () => {
           </div>
         </header>
 
-        <div>
+        <section className="themes-sheet">
+          <div>
           <span className="themes-label">THEME</span>
           <div className="themes-content" style={{ marginTop: '0.25rem' }}>
             <InputField
@@ -90,7 +91,8 @@ export const Themes = () => {
             Add outcome
           </button>
         </div>
-      </section>
+        </section>
+      </div>
     </main>
   )
 }
