@@ -39,6 +39,20 @@ describe('Bubble', () => {
     expect(svgElement.className).toContain('text-slate-300')
   })
 
+  test('uses outline circle icon (far) for unfilled state', () => {
+    render(<Bubble ariaLabel="Unfilled outline bubble" onToggle={() => {}} state="unfilled" />)
+
+    const bubbleButton = screen.getByRole('button', { name: 'Unfilled outline bubble' })
+    const svgElement = bubbleButton.querySelector('svg')
+
+    if (svgElement === null) {
+      throw new Error('Bubble icon not rendered')
+    }
+
+    expect(svgElement.getAttribute('data-icon')).toBe('circle')
+    expect(svgElement.getAttribute('data-prefix')).toBe('far')
+  })
+
   test('calls onToggle when clicked', () => {
     let clickCount = 0
 
