@@ -1,23 +1,30 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons'
-import { faCircle as faCircleOutline } from '@fortawesome/free-regular-svg-icons'
-import type { BubbleState } from '../../../providers/DailyActionsProvider.tsx'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircle,
+  faCircleHalfStroke,
+} from "@fortawesome/free-solid-svg-icons";
+import { faCircle as faCircleOutline } from "@fortawesome/free-regular-svg-icons";
+import type { BubbleState } from "../../../providers/DailyActionsProvider.tsx";
 
 interface BubbleProps {
-  state: BubbleState
-  onToggle: () => void
-  ariaLabel: string
+  state: BubbleState;
+  onToggle: () => void;
+  ariaLabel: string;
 }
 
 const iconClassMap: Record<BubbleState, string> = {
-  filled: 'text-slate-700',
-  halfFilled: 'text-slate-700',
-  unfilled: 'text-slate-300',
-}
+  filled: "text-slate-700",
+  halfFilled: "text-slate-700",
+  unfilled: "text-slate-300",
+};
 
 export const Bubble = ({ ariaLabel, onToggle, state }: BubbleProps) => {
   const icon =
-    state === 'halfFilled' ? faCircleHalfStroke : state === 'unfilled' ? faCircleOutline : faCircle
+    state === "halfFilled"
+      ? faCircleHalfStroke
+      : state === "unfilled"
+        ? faCircleOutline
+        : faCircle;
 
   return (
     <button
@@ -26,7 +33,10 @@ export const Bubble = ({ ariaLabel, onToggle, state }: BubbleProps) => {
       onClick={onToggle}
       type="button"
     >
-      <FontAwesomeIcon className={`text-[1.35rem] ${iconClassMap[state]}`} icon={icon} />
+      <FontAwesomeIcon
+        className={`text-[1.35rem] ${iconClassMap[state]}`}
+        icon={icon}
+      />
     </button>
-  )
-}
+  );
+};
