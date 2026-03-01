@@ -5,6 +5,7 @@ import { Button } from '../../atom/Button/Button.tsx'
 import { Bubble } from '../../atom/Bubble/Bubble.tsx'
 import { DateLabel } from '../../atom/DateLabel/DateLabel.tsx'
 import { InputField } from '../../atom/InputField/InputField.tsx'
+import { Title } from '../../atom/Title/Title.tsx'
 import { useDailyActions } from '../../../providers/DailyActionsProvider.tsx'
 
 export const DailyActions = () => {
@@ -22,7 +23,7 @@ export const DailyActions = () => {
       <div className="mx-auto max-w-7xl">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-white md:text-3xl">Daily Actions</h1>
+            <Title>Daily Actions</Title>
             <p className="text-sm text-slate-600">Track your daily actions across the last 7 days.</p>
           </div>
           <div className="flex w-full gap-2 md:w-auto">
