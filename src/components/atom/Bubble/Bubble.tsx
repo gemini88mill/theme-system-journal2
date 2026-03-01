@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons'
+import { faCircle as faCircleOutline } from '@fortawesome/free-regular-svg-icons'
 import type { BubbleState } from '../../../providers/DailyActionsProvider.tsx'
 
 interface BubbleProps {
@@ -15,7 +16,8 @@ const iconClassMap: Record<BubbleState, string> = {
 }
 
 export const Bubble = ({ ariaLabel, onToggle, state }: BubbleProps) => {
-  const icon = state === 'halfFilled' ? faCircleHalfStroke : faCircle
+  const icon =
+    state === 'halfFilled' ? faCircleHalfStroke : state === 'unfilled' ? faCircleOutline : faCircle
 
   return (
     <button
