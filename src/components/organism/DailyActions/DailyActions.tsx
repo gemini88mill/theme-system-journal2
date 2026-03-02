@@ -24,7 +24,7 @@ export const DailyActions = () => {
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <Title>Daily Actions</Title>
-            <p className="text-sm text-slate-600">Track your daily actions across the last 7 days.</p>
+            <p className="text-sm text-slate-400">Track your daily actions across the last 7 days.</p>
           </div>
           <div className="flex w-full gap-2 md:w-auto">
             <InputField
