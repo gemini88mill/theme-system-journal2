@@ -34,7 +34,7 @@ export const Themes = () => {
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <Title>Themes</Title>
-            <p className="text-sm text-slate-600">Define themes and ideal outcomes.</p>
+            <p className="text-sm text-slate-400">Define themes and ideal outcomes.</p>
           </div>
         </header>
 
