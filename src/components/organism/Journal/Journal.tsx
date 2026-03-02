@@ -115,8 +115,7 @@ export const Journal = () => {
       <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Title>Journal</Title>
-            <p className="text-sm text-slate-400">Record your daily goals and reflections.</p>
+            <Title subtitle="Record your daily goals and reflections.">Journal</Title>
           </div>
         </header>
 

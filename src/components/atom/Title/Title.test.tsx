@@ -38,4 +38,18 @@ describe('Title', () => {
     expect(heading.textContent).toContain('Complex')
     expect(heading.textContent).toContain('Title')
   })
+
+  test('renders subtitle when provided', () => {
+    render(<Title subtitle="A short description">Page Title</Title>)
+
+    expect(screen.getByRole('heading', { level: 1, name: 'Page Title' })).toBeDefined()
+    expect(screen.getByText('A short description')).toBeDefined()
+  })
+
+  test('does not render subtitle when omitted', () => {
+    const { container } = render(<Title>Page Title</Title>)
+
+    expect(screen.getByRole('heading', { level: 1, name: 'Page Title' })).toBeDefined()
+    expect(container.querySelectorAll('p').length).toBe(0)
+  })
 })
