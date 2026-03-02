@@ -33,8 +33,7 @@ export const Themes = () => {
       <div className="mx-auto w-full max-w-[820px]">
         <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Title>Themes</Title>
-            <p className="text-sm text-slate-400">Define themes and ideal outcomes.</p>
+            <Title subtitle="Define themes and ideal outcomes.">Themes</Title>
           </div>
         </header>
 
